@@ -1,0 +1,5 @@
+# Load aliases
+[ -f ~/.bash_aliases ] && . ~/.bash_aliases
+
+# Load profile configurations
+[ -f ~/.bash_profile ] && . ~/.bash_profile

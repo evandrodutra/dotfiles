@@ -42,10 +42,12 @@ brew 'postgis'
 brew 'postgresql'
 brew 'redis'
 brew 'awscli'
+brew 'awsebcli'
 brew 'heroku'
 brew 'nvm'
 brew 'yarn'
 brew 'openssl'
+brew 'neovim'
 
 brew 'mas'
 

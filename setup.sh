@@ -8,6 +8,7 @@ export COMPUTER_NAME='marvin'
 sudo -v
 
 setup_homebrew() {
+function setup_homebrew() {
   echo ""
   if test $(which brew); then
     echo "[INFO] Skipped, Homebrew already installed"
@@ -27,6 +28,8 @@ setup_homebrew() {
 
 setup_osx() {
   sh $DOTFILES_ROOT/osx.sh
+function setup_osx() {
+  sh $DOTFILES_ROOT/.macos
 }
 
 if [ $OS == "Darwin" ]; then

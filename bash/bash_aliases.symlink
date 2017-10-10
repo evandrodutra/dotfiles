@@ -10,6 +10,7 @@ alias gemi="gem install"
 alias migrate="bundle exec rake db:migrate"
 alias migratereset="bundle exec rake db:drop db:create db:migrate db:seed"
 alias rdev="foreman start -f Procfile.local -e .env.development"
+alias bspec="bundle exec rspec"
 
 # Postgres
 alias pgstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"

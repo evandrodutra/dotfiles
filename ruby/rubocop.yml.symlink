@@ -1,0 +1,17 @@
+AllCops:
+  Exclude:
+    - 'db/schema.rb'
+    - 'bin/**'
+    - 'vendor/**/*'
+    - 'tmp/**/*'
+    - 'Guardfile'
+
+Rails:
+  Enabled: true
+
+Metrics/LineLength:
+  Max: 120
+
+Metrics/MethodLength:
+  Exclude:
+    - 'db/migrate/**'

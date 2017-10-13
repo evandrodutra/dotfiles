@@ -61,6 +61,7 @@ mas 'Kindle', id: 405_399_194
 mas 'Reeder 3', id: 880_001_334
 mas 'Moom', id: 419_330_170
 mas 'Dr. Cleaner', id: 921_458_519
+mas 'Twitter', id: 409_789_998
 
 cask 'dropbox'
 cask 'onedrive'

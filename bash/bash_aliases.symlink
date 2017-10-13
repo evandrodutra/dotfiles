@@ -59,9 +59,6 @@ function awslogin() {
   eval $(aws ecr get-login --region eu-central-1 | sed -e 's/-e none//g');
 }
 
-# Sublime
-alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
-
 # ZSH Config
 alias zshconf="nano ~/.zshrc"
 

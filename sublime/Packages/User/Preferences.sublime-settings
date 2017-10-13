@@ -1,0 +1,66 @@
+{
+	"ensure_newline_at_eof_on_save": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"margin": 2,
+	"tab_size": 2,
+	"translate_tabs_to_spaces": true,
+	"trim_automatic_white_space": true,
+	"trim_trailing_white_space_on_save": true,
+	"file_exclude_patterns":
+	[
+		".DS_Store",
+		".Rhistory",
+		".Rbuildignore",
+		".tags*",
+		"*.pyc",
+		"*.pyo",
+		"*.exe",
+		"*.dll",
+		"*.obj",
+		"*.o",
+		"*.a",
+		"*.lib",
+		"*.log",
+		"*.so",
+		"*.dylib",
+		"*.ncb",
+		"*.sdf",
+		"*.suo",
+		"*.pdb",
+		"*.idb",
+		"*.class",
+		"*.psd",
+		"*.db",
+		"*.pdf",
+		"*.aux",
+		"*.fls",
+		"*.fdb_latexmk",
+		"*.synctex.gz",
+		"*.blg",
+		"*.brf",
+		"*.bbl"
+	],
+	"find_selected_text": true,
+	"folder_exclude_patterns":
+	[
+		".cache",
+		"coverage",
+		"test/reports",
+		"__pycache__",
+		".Rproj.user",
+		".git",
+		".svn",
+		".hg",
+		"CVS",
+		".sass-cache",
+		".bundle",
+		"bundle",
+		".rbx",
+		"script",
+		"tmp",
+		"node_modules"
+	]
+}

@@ -17,7 +17,7 @@ alias pgstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/serv
 alias pgstop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 
 # Redis
-alias redisstart="redis-server /usr/local/etc/redis.conf"
+alias redisstart="redis-server /usr/local/etc/redis.conf &"
 
 # Git
 alias gitbc='git branch | egrep -v "(master|\*)" | xargs git branch -D'
@@ -41,22 +41,15 @@ alias lsh="ls -t | head"
 alias duf='du -sk * | sort -n | perl -ne '\''($s,$f)=split(m{\t});for (qw(K M G)) {if($s<1024) {printf("%.1f",$s);print "$_\t$f"; last};$s=$s/1024}'\'
 
 # Mac
-if [ "$(uname -s)" == "Darwin" ]; then
-  alias ls="gls --color"
-  alias locate="mdfind"
-  alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
-  alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
-  alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport"
-  alias afk="open -a /System/Library/Frameworks/ScreenSaver.framework/Versions/A/Resources/ScreenSaverEngine.app"
-fi
+alias ls="gls --color"
+alias locate="mdfind"
+alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
+alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
+alias airport="/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport"
+alias afk="open -a /System/Library/Frameworks/ScreenSaver.framework/Versions/A/Resources/ScreenSaverEngine.app"
 
 function chrome() {
   open $@ --args --allow-file-access-from-files
-}
-
-# AWS login
-function awslogin() {
-  eval $(aws ecr get-login --region eu-central-1 | sed -e 's/-e none//g');
 }
 
 # ZSH Config
@@ -67,3 +60,10 @@ alias ebl="eb list"
 alias ebu="eb use"
 alias ebl="eb logs -a"
 alias ebd="eb deploy"
+
+#docker
+notebook-python() {
+  cd ~/code/notebooks
+  docker pull evandrodutra/python-notebooks
+  docker run -d -p 8888:8888 -v "$(pwd):/home/jovyan/work" evandrodutra/python-notebooks start-notebook.sh --NotebookApp.token='' --NotebookApp.base_url=/
+}

@@ -1,5 +1,7 @@
 #!/bin/sh
 
+export OS="$(uname -s)"
+
 if [ $OS == "Darwin" ]; then
   if test $(which subl); then
     echo "[INFO] Skipped, Sublime Text already intalled"

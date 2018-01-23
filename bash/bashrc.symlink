@@ -3,3 +3,6 @@
 
 # Load profile configurations
 [ -f ~/.bash_profile ] && . ~/.bash_profile
+
+# Load secure configuration
+[ -f ~/.bash_secure ] && . ~/.bash_secure

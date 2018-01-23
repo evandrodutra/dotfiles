@@ -1,0 +1,9 @@
+[ -f ~/.bashrc ] && . ~/.bashrc
+
+ZSH_THEME="robbyrussell"
+
+export ZSH=/Users/evandrodutra/.oh-my-zsh
+
+source $ZSH/oh-my-zsh.sh
+
+plugins=(git)

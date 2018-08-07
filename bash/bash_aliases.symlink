@@ -61,9 +61,16 @@ alias ebu="eb use"
 alias ebl="eb logs -a"
 alias ebd="eb deploy"
 
-#docker
+# Docker python notebook
 notebook-python() {
   cd ~/code/notebooks
   docker pull evandrodutra/python-notebooks
   docker run -d -p 8888:8888 -v "$(pwd):/home/jovyan/work" evandrodutra/python-notebooks start-notebook.sh --NotebookApp.token='' --NotebookApp.base_url=/
+}
+
+# Create gist from git diff
+gdiff() {
+  git add -A
+  git diff --staged | gist -pco -f "$(git diff --full-index | awk 'NR==2' | md5).diff"
+  git reset HEAD -q
 }
